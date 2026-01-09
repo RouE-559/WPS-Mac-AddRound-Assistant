@@ -1,4 +1,4 @@
-# WPS-Mac-A-Round-Assistant（WPS 加Round函数加载项）
+# Mac版WPS一键添加Round函数加载项
 
 一个用于 WPS 表格（Mac）的轻量加载项：在选区内一键为公式/数值添加 `ROUND(x, 2)`，以及移除最外层 `ROUND(expr, n)`。
 一个尝试使用Mac来办公的审计员，完全不懂代码。Mac上没有Windows上的方方格子，尝试使用Trae自力更生，一键添加Round和移除Round是我用得最多的功能了，后续尝试弄点别的功能
