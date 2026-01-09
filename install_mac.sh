@@ -6,7 +6,7 @@ TARGET_DIR="$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/w
 
 ADDIN_NAME="WPSFormulaAssistant"
 ADDIN_TYPE="et"
-ADDIN_VERSION="0.1.5"
+ADDIN_VERSION="0.1.6"
 ADDIN_DIR_NAME="${ADDIN_NAME}_${ADDIN_VERSION}"
 TARGET_PATH="$TARGET_DIR/$ADDIN_DIR_NAME"
 LEGACY_PATH="$TARGET_DIR/$ADDIN_NAME"
@@ -15,6 +15,7 @@ OLD_VERSION_PATH_2="$TARGET_DIR/${ADDIN_NAME}_0.1.1"
 OLD_VERSION_PATH_3="$TARGET_DIR/${ADDIN_NAME}_0.1.2"
 OLD_VERSION_PATH_4="$TARGET_DIR/${ADDIN_NAME}_0.1.3"
 OLD_VERSION_PATH_5="$TARGET_DIR/${ADDIN_NAME}_0.1.4"
+OLD_VERSION_PATH_6="$TARGET_DIR/${ADDIN_NAME}_0.1.5"
 PUBLISH_XML="$TARGET_DIR/publish.xml"
 
 echo "[WPSFormulaAssistant] 开始安装..."
@@ -50,6 +51,11 @@ fi
 if [ -e "$OLD_VERSION_PATH_5" ] || [ -L "$OLD_VERSION_PATH_5" ]; then
   echo "[WPSFormulaAssistant] 清理旧版本: $OLD_VERSION_PATH_5"
   rm -rf "$OLD_VERSION_PATH_5"
+fi
+
+if [ -e "$OLD_VERSION_PATH_6" ] || [ -L "$OLD_VERSION_PATH_6" ]; then
+  echo "[WPSFormulaAssistant] 清理旧版本: $OLD_VERSION_PATH_6"
+  rm -rf "$OLD_VERSION_PATH_6"
 fi
 
 if [ -e "$TARGET_PATH" ] || [ -L "$TARGET_PATH" ]; then

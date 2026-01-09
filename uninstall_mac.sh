@@ -5,7 +5,7 @@ set -euo pipefail
 TARGET_DIR="$HOME/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons"
 
 ADDIN_NAME="WPSFormulaAssistant"
-ADDIN_VERSION="0.1.5"
+ADDIN_VERSION="0.1.6"
 ADDIN_DIR_NAME="${ADDIN_NAME}_${ADDIN_VERSION}"
 TARGET_PATH="$TARGET_DIR/$ADDIN_DIR_NAME"
 OLD_VERSION_PATH="$TARGET_DIR/${ADDIN_NAME}_0.1.0"
@@ -13,6 +13,7 @@ OLD_VERSION_PATH_2="$TARGET_DIR/${ADDIN_NAME}_0.1.1"
 OLD_VERSION_PATH_3="$TARGET_DIR/${ADDIN_NAME}_0.1.2"
 OLD_VERSION_PATH_4="$TARGET_DIR/${ADDIN_NAME}_0.1.3"
 OLD_VERSION_PATH_5="$TARGET_DIR/${ADDIN_NAME}_0.1.4"
+OLD_VERSION_PATH_6="$TARGET_DIR/${ADDIN_NAME}_0.1.5"
 LEGACY_PATH="$TARGET_DIR/$ADDIN_NAME"
 PUBLISH_XML="$TARGET_DIR/publish.xml"
 
@@ -52,6 +53,11 @@ fi
 if [ -e "$OLD_VERSION_PATH_5" ] || [ -L "$OLD_VERSION_PATH_5" ]; then
   echo "[WPSFormulaAssistant] 删除旧版本软链接/目录: $OLD_VERSION_PATH_5"
   rm -rf "$OLD_VERSION_PATH_5"
+fi
+
+if [ -e "$OLD_VERSION_PATH_6" ] || [ -L "$OLD_VERSION_PATH_6" ]; then
+  echo "[WPSFormulaAssistant] 删除旧版本软链接/目录: $OLD_VERSION_PATH_6"
+  rm -rf "$OLD_VERSION_PATH_6"
 fi
 
 if [ -f "$PUBLISH_XML" ]; then

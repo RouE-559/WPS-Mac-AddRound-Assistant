@@ -26,26 +26,6 @@
           />
         </group>
       </tab>
-      <tab id="WPSFormulaAssistantTab" label="公式助手" insertAfterMso="TabHome" visible="true">
-        <group id="WPSFormulaAssistantGroup2" label="公式助手" visible="true">
-          <button
-            id="btnAddRound2"
-            label="添加Round"
-            imageMso="FunctionWizard"
-            onAction="addRound"
-            size="large"
-            visible="true"
-          />
-          <button
-            id="btnRemoveRound2"
-            label="移除Round"
-            imageMso="Clear"
-            onAction="removeRound"
-            size="large"
-            visible="true"
-          />
-        </group>
-      </tab>
     </tabs>
   </ribbon>
 </customUI>
