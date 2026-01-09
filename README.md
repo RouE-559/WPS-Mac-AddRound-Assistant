@@ -24,7 +24,7 @@
 在终端进入项目目录执行：
 
 ```bash
-u
+cd /WPS-Mac-AddRound-Assistant  ##定位到下载的文件夹
 bash ./install_mac.sh
 ```
 
