@@ -24,7 +24,7 @@
 在终端进入项目目录执行：
 
 ```bash
-cd /Users/lly/trae-project/WPS-addons/WPSFormulaAssistant
+u
 bash ./install_mac.sh
 ```
 
@@ -38,7 +38,7 @@ bash ./install_mac.sh
 ## 卸载（macOS）
 
 ```bash
-cd /Users/lly/trae-project/WPS-addons/WPSFormulaAssistant
+cd /WPS-Mac-AddRound-Assistant  ##定位到下载的文件夹
 bash ./uninstall_mac.sh
 ```
 
