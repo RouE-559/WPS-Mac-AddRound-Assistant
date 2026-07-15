@@ -3,27 +3,35 @@
   <ribbon startFromScratch="false">
     <tabs>
       <tab idMso="TabHome">
-        <group
-          id="WPSFormulaAssistantGroup"
-          label="公式助手"
-          visible="true"
-        >
-          <button
-            id="btnAddRound"
-            label="添加Round"
-            imageMso="FunctionWizard"
-            onAction="addRound"
-            size="large"
-            visible="true"
-          />
-          <button
-            id="btnRemoveRound"
-            label="移除Round"
-            imageMso="Clear"
-            onAction="removeRound"
-            size="large"
-            visible="true"
-          />
+        <group id="SheetKitFormulaGroup" label="公式助手" visible="true">
+          <box id="boxFormula" boxStyle="vertical">
+            <splitButton id="splitAddRound" size="large">
+              <button id="btnAddRound" label="添加Round" imageMso="FunctionWizard" onAction="addRound"/>
+              <menu id="menuAddRound">
+                <button id="btnAddRoundD0" label="ROUND(x, 0) — 整数" onAction="addRoundWithDigits"/>
+                <button id="btnAddRoundD1" label="ROUND(x, 1) — 1位小数" onAction="addRoundWithDigits"/>
+                <button id="btnAddRoundD2" label="ROUND(x, 2) — 2位小数（默认）" onAction="addRoundWithDigits"/>
+                <button id="btnAddRoundD3" label="ROUND(x, 3) — 3位小数" onAction="addRoundWithDigits"/>
+                <button id="btnAddRoundD4" label="ROUND(x, 4) — 4位小数" onAction="addRoundWithDigits"/>
+                <menuSeparator id="sepAddRoundCustom"/>
+                <button id="btnAddRoundCustom" label="自定义精度..." onAction="addRoundCustom"/>
+                <menuSeparator id="sepRoundValue"/>
+                <button id="btnRoundValue" label="直接四舍五入..." onAction="roundValue"/>
+              </menu>
+            </splitButton>
+            <button id="btnRemoveRound" label="移除Round" imageMso="Clear" onAction="removeRound" size="large"/>
+          </box>
+        </group>
+        <group id="SheetKitToolsGroup" label="符号" visible="true">
+          <button id="btnToggleSign" label="正负转换" imageMso="Undo" onAction="toggleSign" size="large"/>
+        </group>
+        <group id="SheetKitCopyMDGroup" label="导出" visible="true">
+          <splitButton id="splitCopyAsMarkdown" size="large">
+            <button id="btnCopyAsMarkdown" label="复制为MD表格" imageMso="TableInsert" onAction="copyAsMarkdown"/>
+            <menu id="menuCopyAsMarkdown">
+              <button id="btnSettings" label="设置 LLM API" imageMso="PropertySheet" onAction="showSettings"/>
+            </menu>
+          </splitButton>
         </group>
       </tab>
     </tabs>
